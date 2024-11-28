@@ -1,0 +1,218 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>$BRICK - Brick by Brick</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #121212;
+      color: #ffffff;
+      overflow-x: hidden;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      background: linear-gradient(135deg, #1a1a1a, #000);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      color: #ffcc00;
+      margin-bottom: 20px;
+      letter-spacing: 2px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+      font-style: italic;
+      color: #ffffff;
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Brick Animation */
+    .brick-stack {
+      position: absolute;
+      bottom: 0;
+      display: flex;
+      gap: 5px;
+      justify-content: center;
+    }
+
+    .brick {
+      width: 50px;
+      height: 25px;
+      background: #ffcc00;
+      margin: 5px;
+      animation: build 1.5s ease-in-out infinite;
+    }
+
+    @keyframes build {
+      0% {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    /* Section Styling */
+    section {
+      padding: 50px 20px;
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+
+    section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #ffcc00;
+      text-transform: uppercase;
+    }
+
+    section p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+    }
+
+    /* Call to Action Buttons */
+    .btn {
+      display: inline-block;
+      background-color: #ffcc00;
+      color: #121212;
+      padding: 10px 20px;
+      margin: 20px 10px;
+      font-weight: bold;
+      font-size: 1.2rem;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: all 0.3s;
+      animation: pulse 2s infinite;
+    }
+
+    .btn:hover {
+      background-color: #ffd633;
+      box-shadow: 0 4px 15px rgba(255, 204, 0, 0.6);
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+    }
+
+    /* Contract Address */
+    .contract {
+      background: #1a1a1a;
+      padding: 15px;
+      border: 2px solid #ffcc00;
+      border-radius: 5px;
+      font-size: 1rem;
+      word-wrap: break-word;
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    /* Footer */
+    footer {
+      padding: 20px;
+      background: #1a1a1a;
+      text-align: center;
+      color: #999999;
+      font-size: 1rem;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 3rem;
+      }
+
+      section h2 {
+        font-size: 2rem;
+      }
+
+      .btn {
+        font-size: 1rem;
+        padding: 8px 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1>$BRICK</h1>
+    <p>"I built this sh*t—brick by brick."</p>
+    <div class="brick-stack">
+      <div class="brick"></div>
+      <div class="brick"></div>
+      <div class="brick"></div>
+    </div>
+  </div>
+
+  <!-- Lore Section -->
+  <section>
+    <h2>The Lore</h2>
+    <p>$BRICK is inspired by Franklin Saint from <em>Snowfall</em>. This coin represents the journey of building an empire—brick by brick. It’s for the hustlers, grinders, and dreamers who know the value of patience, resilience, and ambition. Just like Franklin, we’re building something unstoppable.</p>
+  </section>
+
+  <!-- How to Buy -->
+  <section>
+    <h2>How to Buy $BRICK</h2>
+    <p>1. Visit <a href="https://pump.fun" class="btn" target="_blank">Pump.fun</a></p>
+    <p>2. Search for <strong>$BRICK</strong>.</p>
+    <p>3. Purchase directly on the bonding curve.</p>
+  </section>
+
+  <!-- Contract Address -->
+  <section>
+    <h2>Contract Address</h2>
+    <div class="contract">
+      0xYourContractAddressHere1234567890abcdef
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2024 $BRICK Community. Built brick by brick.</p>
+  </footer>
+</body>
+</html>
